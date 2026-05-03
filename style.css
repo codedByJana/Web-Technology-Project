@@ -1,0 +1,374 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #f4f1ea;
+    --accent-color: #c5a059;
+    --text-color: #000042;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Readex Pro', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+
+.site-header {
+    text-align: center;
+    padding: 1.5rem 2rem;
+    background-color: rgba(244, 241, 234, 0.99);
+    color: var(--bg-color);
+    position: absolute;
+    transition: ease;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    color: var(--text-color);
+    transition: transform 0.4s ease, padding 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+
+}
+
+.site-header .nav-urls {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+
+.site-header a {
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.logo {
+    text-decoration: none;
+    font-family: 'Playfair Display', sans-serif;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.parallax-panel {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+/* 
+#home-workshops {
+    background-image: url();
+} */
+
+#home-catalog {
+    background-color: var(--accent-color);
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.carousel-wrapper {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    background-repeat: no-repeat;
+
+}
+
+.carousel-slide::before {
+    content: '';
+    position: absolute;
+    background-color: var(--accent-color);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-slide:hover::before {
+    opacity: 0.25;
+}
+
+.panel-content {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    color: var(--bg-color);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: #c5a059;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: transparent;
+    color: #4a4c4e;
+}
+
+.left-btn {
+    left: 2%;
+}
+
+.right-btn {
+    right: 2%;
+}
+
+.catalog-grid-wrapper {
+    background-color: var(--text-color);
+    width: 100%;
+    max-width: 1000px;
+    padding: 3rem 1rem;
+    color: #f4f1ea;
+    align-items: center;
+    left: 0;
+}
+
+.visit-hero {
+    background-image: linear-gradient(rgba(26, 38, 57, 0.86), rgba(246, 211, 147, 0.729)), url(images/khan-EL-Khalili-Bazaar-EgyptaTours-1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--bg-color);
+    padding: 12rem 2rem 6rem 2rem;
+    text-align: center;
+    z-index: 10;
+    background-attachment: fixed;
+}
+
+.visit-hero h1 {
+    font-size: 3.5rem;
+    margin: 1rem;
+    color: var(--accent-color);
+    text-shadow: 2px 4px 8px rgba(26, 38, 57, 0.9);
+}
+
+.visit-hero p {
+    font-size: 1rem;
+    width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.map-hours-section {
+    padding: 5rem 2rem 2rem 2rem;
+    background-color: var(--bg-color);
+}
+
+.map-hours-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.map-container,
+.hours-container {
+    flex: 1;
+    min-width: 300px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.map-wrapper iframe {
+    border-radius: 8px;
+    border: 2px solid var(--text-color);
+    box-shadow: 0 10px 20px rgba(0,0,66, 0.5);
+}
+
+.hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    height: 450px;
+    margin-top: 1rem;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,66, 0.5);
+}
+
+.hours-table td {
+    padding: 1.2rem 1rem;
+    border-bottom: 1px solid #eee;
+    /* font-weight: bold; */
+}
+
+.hours-table .time {
+    /* font-weight: bold; */
+    text-align: right;
+    color: var(--bg-color);
+}
+
+.tips-section {
+    padding: 2rem 2rem 6rem 2rem;
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.tips-section h2 {
+    color: var(--text-color);
+    margin-bottom: 3rem;
+}
+
+.tips-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.tip-card {
+    background-color: var(--bg-color);
+    padding: 2.5rem 2rem;
+    border-top: 4px solid var(--accent-color);
+    border-radius: 4px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tip-card h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+
+h1 {
+    font-family: 'Playfair Display', sans-serif;
+}
+
+form {
+    max-width: 500px;
+    margin: 0;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Readex Pro', sans-serif;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    /* width: 100%; */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+#success-Message {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    width: 100%;
+    bottom: 0;
+    position: relative;
+}

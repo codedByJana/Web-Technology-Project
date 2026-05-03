@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Readex+Pro:wght@160..700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Khan Elkhalily Bazaar</title>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="nav">
+            <div>
+                <!-- make the logo embedded with a hyperlink to home -->
+                <a href="index.html" class="logo">Khan Elkhalily Bazaar</a>
+            </div>
+            <ul class="nav-urls">
+                <!-- make the links on the far right side of the logo -->
+                <li><a href="catalog.html">Catalog</a></li>
+                <li><a href="workshops.html">Workshops</a></li>
+                <li><a href="visit.html">Visit Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- browse through workshops then redirect to its specific section in workshops.html -->
+    <section class="carousel-wrapper" id="home-workshops">
+        <button class="carousel-btn right-btn" onclick="scrollCarousel(1)">&#10095;</button>
+        <button class="carousel-btn left-btn" onclick="scrollCarousel(-1)">&#10094;</button>
+
+
+        <div class="carousel-container" id="workshop-carousel">
+            <div class="carousel-slide" style="background-image:url(images/Workshops/Pottery-Fustat.webp);">
+                <div class="panel-content">
+                    <h2>The Clay of the Nile</h2>
+                    <a href="workshops.html#pottery" class="btn-primary">Show Details</a>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <div class="panel-content">
+                    <h2>Brass & Copper Art</h2>
+                    <a href="workshops.html#metalwork" class="btn-primary">Show Details</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- browse through different products with button for each -->
+    <section class="parallax-panel" id="home-catalog">
+        <div class="catalog-grid-wrapper">
+            <h2>Treasures of the Bazaar</h2>
+            <div class="home-catalog-grid">
+                <div class="catalog-card">
+                    <img src="" alt="Lantern">
+                    <div class="card-overlay">
+                        <!-- product link to catalog, whatsapp link on catalog -->
+                        <a href="#" class="btn-primary">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- more cards -->
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; Khan Khalily Bazaar. All Rights Reserved</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
