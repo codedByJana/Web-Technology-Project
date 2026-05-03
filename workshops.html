@@ -20,11 +20,9 @@
     <header class="site-header">
         <nav class="nav">
             <div>
-                <!-- make the logo embedded with a hyperlink to home -->
                 <a href="index.html" class="logo">Khan Elkhalily Bazaar</a>
             </div>
             <ul class="nav-urls">
-                <!-- make the links on the far right side of the logo -->
                 <li><a href="catalog.html">Catalog</a></li>
                 <li><a href="workshops.html">Workshops</a></li>
                 <li><a href="visit.html">Visit Us</a></li>
@@ -33,11 +31,75 @@
     </header>
 
     <main>
-        <p>This is the main content</p>
+        <section class="workshop-zigzag" id="pottery">
+            <div class="zigzag-img">
+                <img src="images/Workshops/Pottery-Fustat.webp" alt="Pottery WorkShop in Cairo">
+                <div class="img-accent-border"></div>
+            </div>
+            <div class="zigzag-text">
+                <h2>The Clay of the Nile</h2>
+                <p>Master the ancient art of Egyptian pottery. Feel the earth beneath your hands as our master artisans
+                    guide you through shaping, firing, and glazing your own traditional vessel.</p>
+                <button class="btn-primary" onclick="openModal('Pottery Making')">Register Now</button>
+            </div>
+        </section>
+
+        <section class="workshop-zigzag reverse" id="metalwork">
+            <div class="zigzag-img">
+                <img src="images/Workshops/jewellerycraftsmanship-jpg.webp" alt="Accessories WorkShop in Cairo">
+                <div class="img-accent-border"></div>
+            </div>
+            <div class="zigzag-text">
+                <h2>Brass & Copper Art</h2>
+                <p>Discover the rhythmic tap of the hammer. Learn to etch intricate geometric patterns into glowing
+                    brass, walking away with a custom lantern or plate.</p>
+                <button class="btn-primary" onclick="openModal('Jewellery Making')">Register Now</button>
+            </div>
+        </section>
+        <section class="workshop-zigzag" id="Palm-baskets">
+            <div class="zigzag-img">
+                <img src="images/Workshops/palm leaves weaving.jpeg" alt="Palm Weaving WorkShop in Cairo">
+                <div class="img-accent-border"></div>
+            </div>
+            <div class="zigzag-text">
+                <h2>Threads of the Bazaar</h2>
+                <p>Sit at a traditional loom and weave vibrant cottons and silks. Understand the mathematics and
+                    patience behind Egypt's world-renowned textiles.</p>
+                <button class="btn-primary" onclick="openModal('Palms Weaving')">Register Now</button>
+            </div>
+        </section>
+
+
+        <dialog id="reg-modal" class="modern-modal">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <div class="modal-content">
+                <h3 id="modal-title">Book Your Workshop</h3>
+                <form id="regForm">
+                    <input type="hidden" id="workshop-selection" name="workshop">
+
+                    <label>Traveler Name:</label>
+                    <input type="text" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" required id="email"><br>
+
+                    <label>Date:</label>
+                    <input type="date" required>
+
+                    <button type="submit" class="btn-primary">Confirm Booking</button>
+                </form>
+                <div id="successMessage">
+                    <h3>Booking Confirmed!</h3>
+                    <p>We look forward to hosting you. Your spot is reserved.</p>
+                </div>
+            </div>
+        </dialog>
     </main>
+
     <footer>
         <p>&copy; Khan Khalily Bazaar. All Rights Reserved</p>
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>
