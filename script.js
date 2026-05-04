@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const regForm = document.getElementById("regForm");
-    const successMessage = document.getElementById("success-Message");
+    const successMessage = document.getElementById("successMessage");
     const modalTitle = document.getElementById("modal-title");
     if (regForm) {
         regForm.addEventListener("submit", function (event) {
