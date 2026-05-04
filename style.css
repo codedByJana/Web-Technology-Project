@@ -198,8 +198,7 @@ body {
     left: 0;
 }
 
-.visit-hero {
-    background-image: linear-gradient(rgba(26, 38, 57, 0.86), rgba(246, 211, 147, 0.729)), url(images/khan-EL-Khalili-Bazaar-EgyptaTours-1.webp);
+.page-hero {
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--bg-color);
@@ -209,14 +208,14 @@ body {
     background-attachment: fixed;
 }
 
-.visit-hero h1 {
+.page-hero h1 {
     font-size: 3.5rem;
     margin: 1rem;
     color: var(--accent-color);
     text-shadow: 2px 4px 8px rgba(26, 38, 57, 0.9);
 }
 
-.visit-hero p {
+.page-hero p {
     font-size: 1rem;
     width: 600px;
     margin: 0 auto;
@@ -492,18 +491,255 @@ body {
     animation: backdropFadeOut 0.4s ease forwards;
 }
 
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-auto-flow: dense;
+}
+
+.product-card {
+    background: var(--bg-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid transparent;
+    transition: border 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(197, 160, 89, 0.4);
+}
+
+.product-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}
+
+.product-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 38, 57, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.btn-quick-view {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 24px;
+    font-family: 'Readex Pro', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .btn-quick-view {
+    transform: translateY(0);
+}
+
+.product-info {
+    padding: 1.5rem;
+    background-color: var(--bg-color);
+    text-align: left;
+}
+
+.product-category {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.product-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin: 0 0 0.5rem 0;
+}
+
+.product-price {
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.feature-card {
+    grid-column: span 2;
+    height: 380px;
+}
+
+.artisan-card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.artisan-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.artisan-overlay {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to top, rgba(26, 38, 57, 0.95), transparent);
+    width: 100%;
+    padding: 3rem 2rem 2rem 2rem;
+    color: var(--bg-color);
+    transform: translateY(60px);
+    transition: transform 0.4s ease;
+}
+
+.artisan-card:hover .artisan-overlay {
+    transform: translateY(0);
+}
+
+.team-members {
+    margin-top: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.4s ease 0.2s;
+}
+
+.artisan-card:hover .team-members {
+    opacity: 1;
+}
+
+.member {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+    padding: 0.5rem 0;
+}
+
+.member .name {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.process-card {
+    position: relative;
+    background: #000;
+}
+
+.process-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: opacity 0.4s ease;
+}
+
+.process-card:hover video {
+    opacity: 0.4;
+}
+
+.process-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    color: var(--bg-color);
+}
+
+.process-text h3 {
+    color: var(--accent-color);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.material-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.material-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6);
+    transition: filter 0.4s ease, transform 0.8s ease;
+}
+
+.material-card:hover .material-bg {
+    filter: brightness(0.4);
+    transform: scale(1.05);
+}
+
+.material-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    max-width: 400px;
+    color: var(--bg-color);
+}
+
+.badge {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--bg-color);
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+}
+
 h1 {
     font-family: 'Playfair Display', sans-serif;
 }
 
-form {
-    max-width: 500px;
-    margin: 0;
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
 
 label {
     display: block;
@@ -518,7 +754,7 @@ select {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid --text-color;
     border-radius: 4px;
     font-family: 'Readex Pro', sans-serif;
 }

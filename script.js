@@ -45,7 +45,7 @@ const modalTitle = document.getElementById('modal-title');
 
 function openModal(workshopName) {
     workshopInput.value = workshopName;
-    modalTitle.innerText = "Register for " + workshopName;
+    modalTitle.innerText = "Register for " + workshopName + " workshop!";
     modal.showModal();
 }
 
