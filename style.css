@@ -627,7 +627,7 @@ body {
     background: linear-gradient(to top, rgba(26, 38, 57, 0.95), transparent);
     width: 100%;
     padding: 3rem 2rem 2rem 2rem;
-    color: var(--bg-color);
+    color: var(--text-color);
     transform: translateY(60px);
     transition: transform 0.4s ease;
 }
@@ -646,15 +646,16 @@ body {
     opacity: 1;
 }
 
-.member {
+.member, p {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid rgba(197, 160, 89, 0.3);
     padding: 0.5rem 0;
+    color: var(--bg-color);
 }
 
 .member .name {
-    color: var(--accent-color);
+    color: var(--bg-color);
     font-weight: bold;
 }
 
