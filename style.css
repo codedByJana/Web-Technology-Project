@@ -411,19 +411,19 @@ body {
     color: var(--accent-color);
 }
 
-#success-Message {
+#successMessage {
     display: none;
     text-align: center;
     padding: 2rem 0;
 }
 
-#success-Message h3 {
+#successMessage h3 {
     color: var(--accent-color);
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-#success-Message p {
+#successMessage p {
     color: var(--text-color);
     font-size: 1.1rem;
 }
@@ -540,15 +540,6 @@ button:hover {
     background-color: var(--text-color);
     color: var(--bg-color);
 }
-
-#success-Message {
-    display: none;
-    text-align: center;
-    padding: 2rem;
-    background: white;
-    border-radius: 8px;
-}
-
 
 footer {
     text-align: center;
