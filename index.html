@@ -12,70 +12,142 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/fav-icon.jpg">
     <link rel="stylesheet" href="style.css">
-    <title>Khan Elkhalily Bazaar</title>
+    <title>Khan Elkhalili Bazaar</title>
 </head>
 
 <body>
     <header class="site-header">
         <nav class="nav">
             <div>
-                <!-- make the logo embedded with a hyperlink to home -->
-                <a href="index.html" class="logo">Khan Elkhalily Bazaar</a>
+                <a href="index.html" class="logo">Khan Elkhalili Bazaar</a>
             </div>
             <ul class="nav-urls">
-                <!-- make the links on the far right side of the logo -->
                 <li><a href="catalog.html">Catalog</a></li>
                 <li><a href="workshops.html">Workshops</a></li>
                 <li><a href="visit.html">Visit Us</a></li>
             </ul>
         </nav>
     </header>
-    <!-- browse through workshops then redirect to its specific section in workshops.html -->
-    <section class="carousel-wrapper" id="home-workshops">
-        <button class="carousel-btn right-btn" onclick="scrollCarousel(1)">&#10095;</button>
-        <button class="carousel-btn left-btn" onclick="scrollCarousel(-1)">&#10094;</button>
+    <section class="home-workshops-parallax">
+        <div class="workshops-overlay">
+            <div class="workshop-carousel-container">
+                <button class="carousel-btn left-btn" id="ws-left">&#10094;</button>
 
+                <div class="workshop-track" id="workshop-track">
 
-        <div class="carousel-container" id="workshop-carousel">
-            <div class="carousel-slide" style="background-image:url(images/Workshops/Pottery-Fustat.webp);">
-                <div class="panel-content">
-                    <h2>The Clay of the Nile</h2>
-                    <a href="workshops.html#pottery" class="btn-primary">Show Details</a>
-                </div>
-            </div>
+                    <div class="ws-slide">
+                        <img src="images/Workshops/Pottery-Fustat.webp" alt="Pottery Workshop">
+                        <div class="ws-slide-content">
+                            <h3>Fustat Pottery</h3>
+                            <p class="ws-desc">Shape the clay of the Nile and learn ancient wheel-throwing techniques
+                                from master artisans.</p>
+                            <a href="workshops.html#pottery" class="btn-flash">Join Workshop</a>
+                        </div>
+                    </div>
 
-            <div class="carousel-slide">
-                <div class="panel-content">
-                    <h2>Brass & Copper Art</h2>
-                    <a href="workshops.html#metalwork" class="btn-primary">Show Details</a>
-                </div>
-            </div>
-        </div>
+                    <div class="ws-slide">
+                        <img src="images/Workshops/jewellerycraftsmanship-jpg.webp" alt="MetalWork Workshop">
+                        <div class="ws-slide-content">
+                            <h3>Brass Forging</h3>
+                            <p class="ws-desc">Master the hammer and anvil to create intricate, luminous brass lanterns
+                                and bowls.</p>
+                            <a href="workshops.html#metalwork" class="btn-flash">Join Workshop</a>
+                        </div>
+                    </div>
 
-    </section>
-
-    <!-- browse through different products with button for each -->
-    <section class="parallax-panel" id="home-catalog">
-        <div class="catalog-grid-wrapper">
-            <h2>Treasures of the Bazaar</h2>
-            <div class="home-catalog-grid">
-                <div class="catalog-card">
-                    <img src="" alt="Lantern">
-                    <div class="card-overlay">
-                        <!-- product link to catalog, whatsapp link on catalog -->
-                        <a href="#" class="btn-primary">Order Now</a>
+                    <div class="ws-slide">
+                        <img src="images/Workshops/weaving-no-person.jpg" alt="Weaving Workshop">
+                        <div class="ws-slide-content">
+                            <h3>Arabesque Weaving</h3>
+                            <p class="ws-desc">Sit at a traditional loom and weave vibrant cottons and silks. Understand
+                                the mathematics and patience behind Egypt's world-renowned textiles.</p>
+                            <a href="workshops.html#Weaving" class="btn-flash">Join Workshop</a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- more cards -->
+                <button class="carousel-btn right-btn" id="ws-right">&#10095;</button>
             </div>
         </div>
     </section>
 
+    <section id="home-catalog">
+        <div class="catalog-slider-wrapper">
+            <h2>Treasures of the Bazaar</h2>
 
-    <footer>
-        <p>&copy; Khan Khalily Bazaar. All Rights Reserved</p>
+            <div class="slider-container">
+                <!-- Navigation Arrows -->
+                <button class="slider-btn prev-btn" id="slide-left">&#10094;</button>
+
+                <!-- The Sliding Track -->
+                <div class="slider-track" id="catalog-track">
+
+                    <!-- Product 1 -->
+                    <div class="catalog-card">
+                        <img src="images/BaladiHome_Rug_Amal01_150x150.avif" alt="Baladi Home Rug">
+                        <div class="card-overlay">
+                            <h3>Amal Rug</h3>
+                            <a href="catalog.html" class="btn-primary">View Catalog</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="catalog-card">
+                        <img src="images/BaladiHome_Pillow_Nour01_150x150.avif" alt="Baladi Home Pillow">
+                        <div class="card-overlay">
+                            <h3>Nour Pillow</h3>
+                            <a href="catalog.html" class="btn-primary">View Catalog</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="catalog-card">
+                        <img src="images/products/vintage egyptian mug.jpg" alt="Vintage Egyptian Mug">
+                        <div class="card-overlay">
+                            <h3>Vintage Mug</h3>
+                            <a href="catalog.html" class="btn-primary">View Catalog</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 (Placeholder to show scrolling) -->
+                    <div class="catalog-card">
+                        <img src="images/BaladiHome_Rug_Amal01_150x150.avif" alt="Placeholder">
+                        <div class="card-overlay">
+                            <h3>Brass Lantern</h3>
+                            <a href="catalog.html" class="btn-primary">View Catalog</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="slider-btn next-btn" id="slide-right">&#10095;</button>
+            </div>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Khan el-Khalili</h4>
+                <p>Preserving the heritage of Egyptian craftsmanship through digital curation.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="catalog.html">The Catalog</a>
+                <a href="workshops.html">Artisan Workshops</a>
+                <a href="#">Our Story</a>
+            </div>
+            <div class="footer-col">
+                <h4>Visit Us</h4>
+                <p>Al-Hussein District</p>
+                <p>Cairo, Egypt</p>
+                <p>hello@khalilibazaar.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Khan Khalily Bazaar. All Rights Reserved. Crafted by the Digital Artisans.</p>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>
