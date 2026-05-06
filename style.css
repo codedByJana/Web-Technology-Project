@@ -574,8 +574,7 @@ body {
     opacity: 1;
 }
 
-.member,
-p {
+.member p {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid rgba(197, 160, 89, 0.3);
@@ -821,11 +820,13 @@ p {
     color: var(--text-color);
     margin-bottom: 1rem;
 }
+
 .tip-card p {
     color: var(--text-color);
-    opacity: 0.85; 
+    opacity: 0.85;
     line-height: 1.6;
 }
+
 /* ===== WORKSHOPS.HTML STYLES ===== */
 
 .workshop-zigzag {
