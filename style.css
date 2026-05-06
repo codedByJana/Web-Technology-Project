@@ -821,7 +821,11 @@ p {
     color: var(--text-color);
     margin-bottom: 1rem;
 }
-
+.tip-card p {
+    color: var(--text-color);
+    opacity: 0.85; 
+    line-height: 1.6;
+}
 /* ===== WORKSHOPS.HTML STYLES ===== */
 
 .workshop-zigzag {
@@ -1039,11 +1043,6 @@ p {
 .btn-whatsapp:hover {
     background-color: #a38143;
 }
-
-h1 {
-    font-family: 'Playfair Display', sans-serif;
-}
-
 
 label {
     display: block;
