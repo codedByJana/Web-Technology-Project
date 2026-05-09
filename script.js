@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // ==========================================
     // 1. HEADER LOGIC (Applies to all pages)
     // ==========================================
-    const header = document.querySelector('header'); 
+    const header = document.querySelector('header');
 
     if (header) {
         window.addEventListener('scroll', () => {
@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const successMessage = document.getElementById("successMessage");
     const regModalTitle = document.getElementById("modal-title");
 
+
     if (regForm) {
         regForm.addEventListener("submit", function (event) {
             event.preventDefault();
@@ -90,9 +91,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const workshopInput = document.getElementById('workshop-selection');
 
     if (regModal) {
-        window.openModal = function (workshopName) {
+        window.openModal = function (workshopName, workshopDate) {
+
             workshopInput.value = workshopName;
             regModalTitle.innerText = "Register for " + workshopName + " workshop!";
+
+
+            const dateInput = document.getElementById('workshop-date');
+            
+            if (dateInput) {
+                if (workshopDate) {
+                    let date = new Date(workshopDate);
+                    if (!isNaN(date.getTime())) {
+                        dateInput.value = date.toISOString().split('T')[0];
+                    }
+                } else {
+                    dateInput.value = "";
+                }
+            }
             regModal.showModal();
         };
 
@@ -118,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ==========================================
-    // 5. BANNER CAROUSEL LOGIC (Workshops Page)
+    // 5. BANNER CAROUSEL LOGIC (Home Page)
     // ==========================================
     const carousel = document.getElementById('workshop-carousel');
 

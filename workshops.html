@@ -52,7 +52,8 @@
                 <h2>The Clay of the Nile</h2>
                 <p>Master the ancient art of Egyptian pottery. Feel the earth beneath your hands as our master artisans
                     guide you through shaping, firing, and glazing your own traditional vessel.</p>
-                <button class="btn-primary" onclick="openModal('The Clay of the Nile<')">Register Now</button>
+                <button class="btn-primary" onclick="openModal('The Clay of the Nile', 'May 15, 2026')">Register
+                    Now</button>
             </div>
         </section>
 
@@ -65,7 +66,8 @@
                 <h2>Brass & Copper Art</h2>
                 <p>Discover the rhythmic tap of the hammer. Learn to etch intricate geometric patterns into glowing
                     brass, walking away with a custom lantern or plate.</p>
-                <button class="btn-primary" onclick="openModal('Brass & Copper Art')">Register Now</button>
+                <button class="btn-primary" onclick="openModal('Brass & Copper Art', 'May 18, 2026')">Register
+                    Now</button>
             </div>
         </section>
         <section class="workshop-zigzag" id="Weaving">
@@ -77,7 +79,8 @@
                 <h2>Threads of the Bazaar</h2>
                 <p>Sit at a traditional loom and weave vibrant cottons and silks. Understand the mathematics and
                     patience behind Egypt's world-renowned textiles.</p>
-                <button class="btn-primary" onclick="openModal('Threads of the Bazaar')">Register Now</button>
+                <button class="btn-primary" onclick="openModal('Threads of the Bazaar', 'May 21, 2026')">Register
+                    Now</button>
             </div>
         </section>
 
@@ -95,8 +98,8 @@
                     <label for="email">Email:</label>
                     <input type="email" required id="email"><br>
 
-                    <label>Date:</label>
-                    <input type="date" required>
+                    <label for="workshop-date">Date:</label>
+                    <input type="date" id="workshop-date" name="workshop-date" readonly required>
 
                     <button type="submit" class="btn-primary">Confirm Booking</button>
                 </form>
