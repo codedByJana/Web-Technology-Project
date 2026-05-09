@@ -498,10 +498,12 @@ body {
     transform: translateY(20px);
     transition: transform 0.3s ease;
 }
-.btn-quick-view{
+
+.btn-quick-view {
     background-color: var(--accent-color);
     color: var(--text-color);
 }
+
 .product-card:hover .btn-quick-view {
     transform: translateY(0);
 }
@@ -926,15 +928,22 @@ body {
     position: absolute;
     top: 15px;
     right: 20px;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: var(--text-color);
+    height: 2rem;
+    width: 2rem;
+    border-radius: 2px;
+    font-size: 2.5rem;
+    color: var(--bg-color);
     cursor: pointer;
     transition: color 0.3s;
+    z-index: 100;
+    background-color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .close-btn:hover {
+    transform: scale(1.1);
     color: var(--accent-color);
 }
 
